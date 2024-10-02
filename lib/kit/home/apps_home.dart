@@ -17,18 +17,18 @@ class _AppsHomeState extends State<AppsHome> {
   ThemeData theme = Style.theme();
 
   double mainGridAspectRatio() {
-    double width = MediaQuery.of(context).size.width;
-    int extraSpacing = 60;
-    int gridCount = 2;
-    int fixHeight = 93;
+    final double width = MediaQuery.of(context).size.width;
+    const int extraSpacing = 60;
+    const int gridCount = 2;
+    const int fixHeight = 93;
     return ((width - extraSpacing) / gridCount) / fixHeight;
   }
 
   double gridAspectRatio() {
-    double width = MediaQuery.of(context).size.width;
-    int extraSpacing = 60;
-    int gridCount = 2;
-    int fixHeight = 57;
+    final double width = MediaQuery.of(context).size.width;
+    const int extraSpacing = 60;
+    const int gridCount = 2;
+    const int fixHeight = 57;
     return ((width - extraSpacing) / gridCount) / fixHeight;
   }
 
@@ -67,7 +67,7 @@ class _AppsHomeState extends State<AppsHome> {
                                 childAspectRatio: gridAspectRatio(),
                                 crossAxisSpacing: 20,
                                 children: [
-                                  DemoNavigationItem(title: "Home", navigation: () => Center(child: const Text("Ecommerce Home Screen"))),
+                                  DemoNavigationItem(title: "Home", navigation: () => const Center(child: Text("Ecommerce Home Screen"))),
                                 ]),
                           )),
                 ]),

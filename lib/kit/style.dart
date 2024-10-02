@@ -22,8 +22,7 @@ class Style {
     displayLarge: GoogleFonts.nunito(fontSize: 57).copyWith(fontWeight: FontWeight.w500),
   );
 
-  static final ThemeData _lightTheme =
-      ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff), brightness: Brightness.light), textTheme: _textTheme);
+  static final ThemeData _lightTheme = ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff)), textTheme: _textTheme);
 
   static final ThemeData _darkTheme =
       ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff), brightness: Brightness.dark), textTheme: _textTheme);

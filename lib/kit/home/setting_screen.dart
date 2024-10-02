@@ -28,9 +28,9 @@ class _SettingWidgetState extends State<SettingWidget> {
     setState(() {});
   }
 
-  void launchDocumentation() async {}
+  void launchDocumentation() {}
 
-  void launchGithub() async {}
+  void launchGithub() {}
 
   @override
   Widget build(BuildContext context) {

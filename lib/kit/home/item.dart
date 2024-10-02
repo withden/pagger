@@ -12,7 +12,7 @@ class DemoNavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Style.theme();
+    final ThemeData theme = Style.theme();
 
     return InkWell(
         onTap: () async {
@@ -49,7 +49,7 @@ class DemoNavigationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Style.theme();
+    final ThemeData theme = Style.theme();
     return Scaffold(
       appBar: AppBar(
         title: Text(

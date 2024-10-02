@@ -13,7 +13,7 @@ class AppTheme {
 
   static bool changeTheme(ThemeType type) {
     themeType = type;
-    BuildContext? context = Get.context;
+    final BuildContext? context = Get.context;
     if (context != null) {
       Provider.of<AppNotifier>(context, listen: false).notify();
     }
@@ -21,13 +21,13 @@ class AppTheme {
     return true;
   }
 
-  static init() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  static Future<void> init() async {
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     themeType = sharedPreferences.getString(_storageKey).toString() == "dark" ? ThemeType.dark : ThemeType.light;
   }
 
   static Future<void> _syncToStorage() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setString(_storageKey, themeType == ThemeType.dark ? "dark" : "light");
   }
 }
