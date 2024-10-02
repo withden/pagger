@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 import 'kit/home/home_screen.dart';
 import 'library/library.dart';
@@ -9,7 +10,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppTheme.init();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider<AppNotifier>(
+    create: (context) => AppNotifier(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
