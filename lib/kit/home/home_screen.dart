@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
+import 'package:pagger/kit/home/apps_home.dart';
 import 'package:pagger/kit/home/setting_screen.dart';
 import 'package:pagger/kit/style.dart';
 
@@ -16,9 +17,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   ThemeData theme = Style.theme();
 
   final List<Widget> bottomBarPages = [
-    const Center(
-      child: Text("Apps"),
-    ),
+    const AppsHome(),
     const Center(
       child: Text("Widgets"),
     ),
