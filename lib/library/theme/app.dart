@@ -1,4 +1,8 @@
 // ::Import 1
+import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:pagger/library/library.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum ThemeType { light, dark, system }
@@ -9,6 +13,10 @@ class AppTheme {
 
   static bool changeTheme(ThemeType type) {
     themeType = type;
+    BuildContext? context = Get.context;
+    if (context != null) {
+      Provider.of<AppNotifier>(context, listen: false).notify();
+    }
     _syncToStorage();
     return true;
   }

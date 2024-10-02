@@ -36,6 +36,7 @@ class _AppsHomeState extends State<AppsHome> {
   Widget build(BuildContext context) {
     return Consumer<AppNotifier>(
       builder: (BuildContext context, AppNotifier value, Widget? child) {
+        theme = Style.theme();
         return ListView(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
           shrinkWrap: true,

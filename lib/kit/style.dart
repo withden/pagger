@@ -1,6 +1,7 @@
 // ::Import 1
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pagger/library/library.dart';
 
 class Style {
   static final _textTheme = TextTheme(
@@ -28,6 +29,6 @@ class Style {
       ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff), brightness: Brightness.dark), textTheme: _textTheme);
 
   static ThemeData theme() {
-    return _lightTheme;
+    return AppTheme.themeType == ThemeType.dark ? _darkTheme : _lightTheme;
   }
 }
