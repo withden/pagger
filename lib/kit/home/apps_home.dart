@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:pagger/kit/style.dart';
 import 'package:pagger/library/library.dart';
+import 'package:pagger/pages/shopping_cart_1/view.dart' as shopping_cart_1;
 import 'package:pagger/pages/shopping_home_1/view.dart' as shopping_home_1;
 import 'package:provider/provider.dart';
 
@@ -69,6 +70,7 @@ class _AppsHomeState extends State<AppsHome> {
                                 crossAxisSpacing: 20,
                                 children: [
                                   DemoNavigationItem(title: "Home", navigation: () => const shopping_home_1.ShoppingHomeView()),
+                                  DemoNavigationItem(title: "Cart", navigation: () => const shopping_cart_1.ShoppingCartView()),
                                 ]),
                           )),
                 ]),
