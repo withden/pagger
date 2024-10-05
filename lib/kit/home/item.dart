@@ -62,7 +62,6 @@ class DemoNavigationPage extends StatelessWidget {
             },
             icon: const Icon(
               Symbols.chevron_left_rounded,
-              size: 18,
             )),
       ),
       body: body,
