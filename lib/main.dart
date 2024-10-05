@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pagger/kit/style.dart';
+import 'package:pagger/routes.dart';
 import 'package:provider/provider.dart';
 
 import 'kit/home/home_screen.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         home: const HomeScreen(),
+        getPages: getRoutes(),
         theme: Style.lightTheme,
         darkTheme: Style.darkTheme,
         themeMode: AppTheme.themeType,
