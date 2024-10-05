@@ -5,27 +5,27 @@ import 'package:pagger/library/library.dart';
 
 class Style {
   static final _textTheme = TextTheme(
-    labelSmall: GoogleFonts.nunito(fontSize: 11).copyWith(fontWeight: FontWeight.w500),
-    labelMedium: GoogleFonts.nunito(fontSize: 13).copyWith(fontWeight: FontWeight.w500),
-    labelLarge: GoogleFonts.nunito(fontSize: 15).copyWith(fontWeight: FontWeight.w600),
-    bodySmall: GoogleFonts.nunito(fontSize: 12).copyWith(fontWeight: FontWeight.w500),
-    bodyMedium: GoogleFonts.nunito(fontSize: 14).copyWith(fontWeight: FontWeight.w500),
-    bodyLarge: GoogleFonts.nunito(fontSize: 16).copyWith(fontWeight: FontWeight.w500),
-    titleSmall: GoogleFonts.nunito(fontSize: 14).copyWith(fontWeight: FontWeight.w600),
-    titleMedium: GoogleFonts.nunito(fontSize: 16).copyWith(fontWeight: FontWeight.w600),
-    titleLarge: GoogleFonts.nunito(fontSize: 20).copyWith(fontWeight: FontWeight.w600),
-    headlineSmall: GoogleFonts.nunito(fontSize: 24).copyWith(fontWeight: FontWeight.w500),
-    headlineMedium: GoogleFonts.nunito(fontSize: 28).copyWith(fontWeight: FontWeight.w500),
-    headlineLarge: GoogleFonts.nunito(fontSize: 32).copyWith(fontWeight: FontWeight.w500),
-    displaySmall: GoogleFonts.nunito(fontSize: 36).copyWith(fontWeight: FontWeight.w500),
-    displayMedium: GoogleFonts.nunito(fontSize: 51).copyWith(fontWeight: FontWeight.w500),
-    displayLarge: GoogleFonts.nunito(fontSize: 57).copyWith(fontWeight: FontWeight.w500),
+    labelSmall: GoogleFonts.dmSans(fontSize: 11).copyWith(fontWeight: FontWeight.w500),
+    labelMedium: GoogleFonts.dmSans(fontSize: 13).copyWith(fontWeight: FontWeight.w500),
+    labelLarge: GoogleFonts.dmSans(fontSize: 15).copyWith(fontWeight: FontWeight.w600),
+    bodySmall: GoogleFonts.dmSans(fontSize: 12).copyWith(fontWeight: FontWeight.w500),
+    bodyMedium: GoogleFonts.dmSans(fontSize: 14).copyWith(fontWeight: FontWeight.w500),
+    bodyLarge: GoogleFonts.dmSans(fontSize: 16).copyWith(fontWeight: FontWeight.w500),
+    titleSmall: GoogleFonts.dmSans(fontSize: 14).copyWith(fontWeight: FontWeight.w600),
+    titleMedium: GoogleFonts.dmSans(fontSize: 16).copyWith(fontWeight: FontWeight.w600),
+    titleLarge: GoogleFonts.dmSans(fontSize: 20).copyWith(fontWeight: FontWeight.w600),
+    headlineSmall: GoogleFonts.dmSans(fontSize: 24).copyWith(fontWeight: FontWeight.w500),
+    headlineMedium: GoogleFonts.dmSans(fontSize: 28).copyWith(fontWeight: FontWeight.w500),
+    headlineLarge: GoogleFonts.dmSans(fontSize: 32).copyWith(fontWeight: FontWeight.w500),
+    displaySmall: GoogleFonts.dmSans(fontSize: 36).copyWith(fontWeight: FontWeight.w500),
+    displayMedium: GoogleFonts.dmSans(fontSize: 51).copyWith(fontWeight: FontWeight.w500),
+    displayLarge: GoogleFonts.dmSans(fontSize: 57).copyWith(fontWeight: FontWeight.w500),
   );
 
-  static final ThemeData lightTheme = ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff)), textTheme: _textTheme);
+  static final ThemeData lightTheme = ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6625FC)), textTheme: _textTheme);
 
   static final ThemeData darkTheme =
-      ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff), brightness: Brightness.dark), textTheme: _textTheme);
+      ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6625FC), brightness: Brightness.dark), textTheme: _textTheme);
 
   static ThemeData theme() {
     return AppTheme.themeType == ThemeMode.dark ? darkTheme : lightTheme;

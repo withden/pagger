@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
 import 'package:pagger/kit/home/apps_home.dart';
+import 'package:pagger/kit/home/material_widget_home.dart';
+import 'package:pagger/kit/home/others_home.dart';
 import 'package:pagger/kit/home/setting_screen.dart';
 import 'package:pagger/kit/style.dart';
 import 'package:pagger/library/library.dart';
@@ -18,15 +20,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   ThemeData theme = Style.theme();
 
-  final List<Widget> bottomBarPages = [
-    const AppsHome(),
-    const Center(
-      child: Text("Widgets"),
-    ),
-    const Center(
-      child: Text("Other"),
-    )
-  ];
+  final List<Widget> bottomBarPages = [const AppsHome(), const MaterialWidgetsHome(), const OthersHome()];
 
   void onChangeIndex(int index) {
     selectedIndex = index;

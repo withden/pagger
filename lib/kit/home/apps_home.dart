@@ -80,11 +80,11 @@ class _AppsHomeState extends State<AppsHome> {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color: theme.colorScheme.primary.withOpacity(.2),
+                color: theme.colorScheme.primaryContainer,
               ),
               child: Center(
                   child: Text("More Apps are coming soon...",
-                      style: theme.textTheme.bodyMedium!.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w600))),
+                      style: theme.textTheme.bodyLarge!.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600))),
             ),
           ],
         );
