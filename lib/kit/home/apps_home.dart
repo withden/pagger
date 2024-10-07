@@ -6,6 +6,7 @@ import 'package:pagger/pages/shopping_cart_1/view.dart' as shopping_cart_1;
 import 'package:pagger/pages/shopping_checkout_1/view.dart' as shopping_checkout_1;
 import 'package:pagger/pages/shopping_explore_1/view.dart' as shopping_explore_1;
 import 'package:pagger/pages/shopping_home_1/view.dart' as shopping_home_1;
+import 'package:pagger/pages/shopping_orders_1/view.dart' as shopping_orders_1;
 import 'package:provider/provider.dart';
 
 import 'item.dart';
@@ -75,6 +76,7 @@ class _AppsHomeState extends State<AppsHome> {
                                   DemoNavigationItem(title: "Cart", navigation: () => const shopping_cart_1.ShoppingCartView()),
                                   DemoNavigationItem(title: "Explore", navigation: () => const shopping_explore_1.ShoppingExploreView()),
                                   DemoNavigationItem(title: "Checkout", navigation: () => const shopping_checkout_1.ShoppingCheckoutView()),
+                                  DemoNavigationItem(title: "Orders", navigation: () => const shopping_orders_1.ShoppingOrdersView()),
                                 ]),
                           )),
                 ]),
