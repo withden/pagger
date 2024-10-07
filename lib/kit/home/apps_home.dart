@@ -8,6 +8,7 @@ import 'package:pagger/pages/shopping_explore_1/view.dart' as shopping_explore_1
 import 'package:pagger/pages/shopping_home_1/view.dart' as shopping_home_1;
 import 'package:pagger/pages/shopping_orders_1/view.dart' as shopping_orders_1;
 import 'package:pagger/pages/shopping_product_1/view.dart' as shopping_product_1;
+import 'package:pagger/pages/shopping_profile_1/view.dart' as shopping_profile_1;
 import 'package:provider/provider.dart';
 
 import 'item.dart';
@@ -74,11 +75,12 @@ class _AppsHomeState extends State<AppsHome> {
                                 crossAxisSpacing: 20,
                                 children: [
                                   DemoNavigationItem(title: "Home", navigation: () => const shopping_home_1.ShoppingHomeView()),
-                                  DemoNavigationItem(title: "Cart", navigation: () => const shopping_cart_1.ShoppingCartView()),
                                   DemoNavigationItem(title: "Explore", navigation: () => const shopping_explore_1.ShoppingExploreView()),
+                                  DemoNavigationItem(title: "Product", navigation: () => const shopping_product_1.ShoppingProductView()),
+                                  DemoNavigationItem(title: "Cart", navigation: () => const shopping_cart_1.ShoppingCartView()),
                                   DemoNavigationItem(title: "Checkout", navigation: () => const shopping_checkout_1.ShoppingCheckoutView()),
                                   DemoNavigationItem(title: "Orders", navigation: () => const shopping_orders_1.ShoppingOrdersView()),
-                                  DemoNavigationItem(title: "Product", navigation: () => const shopping_product_1.ShoppingProductView()),
+                                  DemoNavigationItem(title: "Profile", navigation: () => const shopping_profile_1.ShoppingProfileView()),
                                 ]),
                           )),
                 ]),
