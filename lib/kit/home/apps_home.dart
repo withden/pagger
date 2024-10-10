@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:pagger/kit/style.dart';
 import 'package:pagger/library/library.dart';
+import 'package:pagger/pages/health_activity_1/view.dart' as health_activity_1;
+import 'package:pagger/pages/health_home_1/view.dart' as health_home_1;
+import 'package:pagger/pages/health_profile_1/view.dart' as health_profile_1;
+import 'package:pagger/pages/health_schedule_1/view.dart' as health_schedule_1;
 import 'package:pagger/pages/shopping_cart_1/view.dart' as shopping_cart_1;
 import 'package:pagger/pages/shopping_checkout_1/view.dart' as shopping_checkout_1;
 import 'package:pagger/pages/shopping_explore_1/view.dart' as shopping_explore_1;
@@ -81,6 +85,26 @@ class _AppsHomeState extends State<AppsHome> {
                                   DemoNavigationItem(title: "Checkout", navigation: () => const shopping_checkout_1.ShoppingCheckoutView()),
                                   DemoNavigationItem(title: "Orders", navigation: () => const shopping_orders_1.ShoppingOrdersView()),
                                   DemoNavigationItem(title: "Profile", navigation: () => const shopping_profile_1.ShoppingProfileView()),
+                                ]),
+                          )),
+                  DemoNavigationItem(
+                      title: "Health 1",
+                      iconData: Symbols.health_and_safety_rounded,
+                      navigation: () => DemoNavigationPage(
+                            title: 'Health',
+                            body: GridView.count(
+                                crossAxisCount: 2,
+                                physics: const ClampingScrollPhysics(),
+                                shrinkWrap: true,
+                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                                mainAxisSpacing: 20,
+                                childAspectRatio: gridAspectRatio(),
+                                crossAxisSpacing: 20,
+                                children: [
+                                  DemoNavigationItem(title: "Home", navigation: () => const health_home_1.HealthViewView()),
+                                  DemoNavigationItem(title: "Activity", navigation: () => const health_activity_1.HealthActivityView()),
+                                  DemoNavigationItem(title: "Schedule", navigation: () => const health_schedule_1.HealthScheduleView()),
+                                  DemoNavigationItem(title: "Profile", navigation: () => const health_profile_1.HealthProfileView()),
                                 ]),
                           )),
                 ]),
