@@ -40,14 +40,14 @@ class _ShoppingHomeViewState extends State<ShoppingHomeView> {
                   AdPosterCard(),
                   const SizedBox(height: 16),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text("Categories", style: theme.textTheme.titleSmall),
                   ),
                   const SizedBox(height: 12),
                   CategoryList(),
                   const SizedBox(height: 16),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text("New Products", style: theme.textTheme.titleSmall),
                   ),
                   const SizedBox(height: 12),

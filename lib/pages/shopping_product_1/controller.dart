@@ -42,7 +42,7 @@ class ShoppingProductController extends GetxController {
     update();
   }
 
-  void onChangeFavouriteToggle() {
+  void toggleFavorite() {
     isFavourite = !isFavourite;
     update();
   }

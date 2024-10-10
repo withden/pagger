@@ -117,12 +117,12 @@ class CartList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: controller.carts.length,
       physics: const NeverScrollableScrollPhysics(),
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       itemBuilder: (context, index) {
         return CartWidget(cart: controller.carts[index]);
       },
       separatorBuilder: (context, index) {
-        return const SizedBox(height: 20);
+        return const SizedBox(height: 16);
       },
     );
   }
@@ -167,7 +167,7 @@ class PaymentSummeryCard extends StatelessWidget {
                   const Spacer(),
                   Text("\$${ParseHelper.numberAsCurrency(controller.order)}")
                 ]),
-                const Row(children: [Icon(Symbols.local_shipping, size: 20), SizedBox(width: 12), Text("Delivery"), Spacer(), Text("Free")]),
+                const Row(children: [Icon(Symbols.local_shipping_rounded, size: 20), SizedBox(width: 12), Text("Delivery"), Spacer(), Text("Free")]),
                 Row(children: [
                   Icon(Symbols.text_snippet_rounded, size: 20, color: theme.colorScheme.error),
                   const SizedBox(width: 12),

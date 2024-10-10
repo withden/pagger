@@ -22,11 +22,11 @@ class ProductImage extends StatelessWidget {
           child: Image.asset(controller.selectImage, fit: BoxFit.cover, width: double.infinity, height: 250),
         ),
         Container(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
           decoration: BoxDecoration(
-              color: theme.colorScheme.error, borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomRight: Radius.circular(8))),
+              color: theme.colorScheme.tertiary, borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomRight: Radius.circular(12))),
           clipBehavior: Clip.antiAliasWithSaveLayer,
-          child: Text("Sale", style: theme.textTheme.bodyMedium!.copyWith(color: theme.colorScheme.onError)),
+          child: Text("Sale", style: theme.textTheme.bodyMedium!.copyWith(color: theme.colorScheme.onTertiary)),
         )
       ],
     );
@@ -42,15 +42,18 @@ class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-        runSpacing: 20,
-        spacing: 20,
+        runSpacing: 16,
+        spacing: 16,
         children: controller.productImages
             .map((image) => InkWell(
                   onTap: () => controller.onChangeSelectImage(image),
                   borderRadius: BorderRadius.circular(8),
                   child: Container(
                     decoration: BoxDecoration(
-                        border: image == controller.selectImage ? Border.all(width: 1.2, strokeAlign: 1) : null, borderRadius: BorderRadius.circular(6)),
+                        border: image == controller.selectImage
+                            ? Border.all(width: 1.5, strokeAlign: BorderSide.strokeAlignOutside, color: theme.colorScheme.primary)
+                            : null,
+                        borderRadius: BorderRadius.circular(8)),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Image.asset(image, fit: BoxFit.cover, height: 48, width: 48),
                   ),
@@ -79,7 +82,7 @@ class SizeChart extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                color: isSelected ? theme.colorScheme.primary : theme.colorScheme.surfaceContainer,
+                color: isSelected ? theme.colorScheme.secondary : theme.colorScheme.surfaceContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
@@ -87,7 +90,7 @@ class SizeChart extends StatelessWidget {
                   size,
                   style: theme.textTheme.bodySmall!.copyWith(
                       fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                      color: isSelected ? theme.colorScheme.onPrimary : theme.colorScheme.onSurface),
+                      color: isSelected ? theme.colorScheme.onSecondary : theme.colorScheme.onSurface),
                 ),
               ),
             ),
@@ -115,7 +118,7 @@ class ColorList extends StatelessWidget {
             width: 36,
             height: 36,
             decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(8)),
-            child: isSelect ? const Icon(Symbols.check, size: 20, color: Colors.white) : null,
+            child: isSelect ? const Icon(Symbols.check_rounded, size: 20, color: Colors.white) : null,
           ),
         );
       }).toList(),

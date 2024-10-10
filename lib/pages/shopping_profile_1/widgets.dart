@@ -34,7 +34,7 @@ class ImageSelectionBottomSheet extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Symbols.camera_alt, color: theme.colorScheme.onSurface),
+                    Icon(Symbols.camera_alt_rounded, color: theme.colorScheme.onSurface),
                     const SizedBox(height: 12),
                     Text("Camera", style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface)),
                   ],
@@ -56,7 +56,7 @@ class ImageSelectionBottomSheet extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Symbols.image, color: theme.colorScheme.onSurface),
+                    Icon(Symbols.image_rounded, color: theme.colorScheme.onSurface),
                     const SizedBox(height: 12),
                     Text("Gallery", style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface)),
                   ],

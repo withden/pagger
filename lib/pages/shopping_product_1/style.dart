@@ -7,7 +7,7 @@ import 'package:pagger/library/library.dart';
 class Style {
   static final _textTheme = TextTheme(
     labelSmall: GoogleFonts.nunito(fontSize: 11).copyWith(fontWeight: FontWeight.w500),
-    labelMedium: GoogleFonts.nunito(fontSize: 13).copyWith(fontWeight: FontWeight.w500),
+    labelMedium: GoogleFonts.nunito(fontSize: 13).copyWith(fontWeight: FontWeight.w600),
     labelLarge: GoogleFonts.nunito(fontSize: 15).copyWith(fontWeight: FontWeight.w600),
     bodySmall: GoogleFonts.nunito(fontSize: 12).copyWith(fontWeight: FontWeight.w500),
     bodyMedium: GoogleFonts.nunito(fontSize: 14).copyWith(fontWeight: FontWeight.w500),

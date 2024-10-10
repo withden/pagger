@@ -48,7 +48,7 @@ class ShoppingHomeController extends GetxController {
 
   double productGridAspectRatio() {
     final double width = MediaQuery.of(Get.context!).size.width;
-    const int extraSpacing = 60;
+    const int extraSpacing = 48;
     const int gridCount = 2;
     const int fixHeight = 258;
     return ((width - extraSpacing) / gridCount) / fixHeight;

@@ -7,14 +7,14 @@ import 'package:pagger/library/library.dart';
 class Style {
   static final _textTheme = TextTheme(
     labelSmall: GoogleFonts.nunito(fontSize: 11).copyWith(fontWeight: FontWeight.w500),
-    labelMedium: GoogleFonts.nunito(fontSize: 13).copyWith(fontWeight: FontWeight.w500),
+    labelMedium: GoogleFonts.nunito(fontSize: 13).copyWith(fontWeight: FontWeight.w600),
     labelLarge: GoogleFonts.nunito(fontSize: 15).copyWith(fontWeight: FontWeight.w600),
     bodySmall: GoogleFonts.nunito(fontSize: 12).copyWith(fontWeight: FontWeight.w500),
     bodyMedium: GoogleFonts.nunito(fontSize: 14).copyWith(fontWeight: FontWeight.w500),
     bodyLarge: GoogleFonts.nunito(fontSize: 16).copyWith(fontWeight: FontWeight.w500),
-    titleSmall: GoogleFonts.nunito(fontSize: 15).copyWith(fontWeight: FontWeight.w600),
-    titleMedium: GoogleFonts.nunito(fontSize: 17).copyWith(fontWeight: FontWeight.w600),
-    titleLarge: GoogleFonts.nunito(fontSize: 19).copyWith(fontWeight: FontWeight.w600),
+    titleSmall: GoogleFonts.nunito(fontSize: 14).copyWith(fontWeight: FontWeight.w600),
+    titleMedium: GoogleFonts.nunito(fontSize: 16).copyWith(fontWeight: FontWeight.w600),
+    titleLarge: GoogleFonts.nunito(fontSize: 20).copyWith(fontWeight: FontWeight.w600),
     headlineSmall: GoogleFonts.nunito(fontSize: 24).copyWith(fontWeight: FontWeight.w500),
     headlineMedium: GoogleFonts.nunito(fontSize: 28).copyWith(fontWeight: FontWeight.w500),
     headlineLarge: GoogleFonts.nunito(fontSize: 32).copyWith(fontWeight: FontWeight.w500),

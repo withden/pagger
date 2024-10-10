@@ -85,7 +85,7 @@ class ShoppingExploreController extends GetxController {
 
   double findAspectRatio() {
     final width = MediaQuery.of(Get.context!).size.width;
-    const extraSpacing = 60;
+    const extraSpacing = 16 * 3;
     const gridCount = 2;
     const fixHeight = 258;
     return ((width - extraSpacing) / gridCount) / fixHeight;

@@ -15,7 +15,7 @@ class AdPosterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -37,9 +37,14 @@ class AdPosterCard extends StatelessWidget {
                     ))
               ],
             ),
-            Image.asset(
-              "assets/images/shopping/mega_sale.png",
-              height: 110,
+            const SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: Image.asset(
+                "assets/images/shopping/mega_sale.png",
+                height: 100,
+              ),
             ),
           ],
         ),
@@ -93,7 +98,7 @@ class CategoryList extends StatelessWidget {
       height: 77,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -199,11 +204,11 @@ class ProductGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
-        padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+        padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 12,
-          crossAxisSpacing: 20,
+          crossAxisSpacing: 16,
           childAspectRatio: controller.productGridAspectRatio(),
         ),
         shrinkWrap: true,

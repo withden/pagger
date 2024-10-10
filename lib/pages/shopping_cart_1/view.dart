@@ -40,9 +40,9 @@ class _ShoppingCartViewState extends State<ShoppingCartView> {
                     child: Column(
                       children: [
                         CartList(),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 16),
                         PaymentSummeryCard(),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 16),
                         FilledButton.icon(
                           onPressed: controller.goToCheckout,
                           style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(theme.colorScheme.primary)),

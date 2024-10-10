@@ -80,7 +80,7 @@ class CategoryList extends StatelessWidget {
       height: 84,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -192,9 +192,9 @@ class ProductGrid extends StatelessWidget {
           )
         : GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
-            padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 20, childAspectRatio: controller.findAspectRatio()),
+                crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 16, childAspectRatio: controller.findAspectRatio()),
             shrinkWrap: true,
             itemCount: controller.filteredProducts.length,
             itemBuilder: (_, index) {
