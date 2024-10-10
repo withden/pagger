@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   final List<Widget> bottomBarPages = [const AppsHome(), const MaterialWidgetsHome(), const OthersHome()];
 
-  void onChangeIndex(int index) {
+  void onChangePage(int index) {
     selectedIndex = index;
     setState(() {});
   }
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               body: bottomBarPages[selectedIndex],
               bottomNavigationBar: NavigationBar(
                 selectedIndex: selectedIndex,
-                onDestinationSelected: (value) => onChangeIndex(value),
+                onDestinationSelected: onChangePage,
                 indicatorColor: theme.colorScheme.primaryContainer,
                 backgroundColor: theme.colorScheme.surface,
                 destinations: [
