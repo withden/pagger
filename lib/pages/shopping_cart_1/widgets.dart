@@ -22,7 +22,7 @@ class DecrementButton extends StatelessWidget {
         visualDensity: VisualDensity.compact,
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(canRemove ? theme.colorScheme.error : theme.colorScheme.primary),
-          overlayColor: WidgetStatePropertyAll(canRemove ? theme.colorScheme.onError.withAlpha(60) : theme.colorScheme.onPrimary.withAlpha(60)),
+          overlayColor: WidgetStatePropertyAll(canRemove ? theme.colorScheme.onError.withOpacity(0.1) : theme.colorScheme.onPrimary.withOpacity(0.1)),
         ),
         onPressed: () => controller.decreaseQuantity(cart),
         icon: Icon(canRemove ? Symbols.delete_rounded : Symbols.remove_rounded,
@@ -46,7 +46,7 @@ class IncrementButton extends StatelessWidget {
         disabledColor: theme.disabledColor,
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(canIncrease ? theme.colorScheme.primary : theme.disabledColor),
-          overlayColor: WidgetStatePropertyAll(canIncrease ? theme.colorScheme.onPrimary.withAlpha(28) : theme.colorScheme.onSurface.withAlpha(28)),
+          overlayColor: WidgetStatePropertyAll(canIncrease ? theme.colorScheme.onPrimary.withOpacity(0.1) : theme.colorScheme.onSurface.withOpacity(0.1)),
         ),
         onPressed: canIncrease ? () => controller.increaseQuantity(cart) : null,
         icon: Icon(Symbols.add_rounded, color: canIncrease ? theme.colorScheme.onPrimary : theme.colorScheme.onSurface, size: 14));

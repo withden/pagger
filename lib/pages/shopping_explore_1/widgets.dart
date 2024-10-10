@@ -51,13 +51,13 @@ class CategoryWidget extends StatelessWidget {
       children: [
         InkWell(
             onTap: () => controller.selectCategory(category),
-            splashColor: theme.colorScheme.onSurface.withAlpha(20),
+            splashColor: theme.colorScheme.onSurface.withOpacity(0.1),
             customBorder: const CircleBorder(),
             child: Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isSelected ? theme.colorScheme.onSurface.withAlpha(28) : theme.colorScheme.surfaceContainer,
+                color: isSelected ? theme.colorScheme.onSurface.withOpacity(0.1) : theme.colorScheme.surfaceContainer,
               ),
               child: Image.asset(category.image, height: 32, fit: BoxFit.cover),
             )),
@@ -88,13 +88,13 @@ class CategoryList extends StatelessWidget {
               children: [
                 InkWell(
                     onTap: () => controller.selectCategory(null),
-                    splashColor: theme.colorScheme.onSurface.withAlpha(20),
+                    splashColor: theme.colorScheme.onSurface.withOpacity(0.1),
                     customBorder: const CircleBorder(),
                     child: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: controller.selectedCategoryId == null ? theme.colorScheme.onSurface.withAlpha(28) : theme.colorScheme.surfaceContainer),
+                          color: controller.selectedCategoryId == null ? theme.colorScheme.onSurface.withOpacity(0.1) : theme.colorScheme.surfaceContainer),
                       child: Image.asset("assets/images/shopping/categories/all.png", height: 32, fit: BoxFit.cover),
                     )),
                 const SizedBox(height: 4),
@@ -161,7 +161,7 @@ class ProductWidget extends StatelessWidget {
                 IconButton(
                     onPressed: () => controller.toggleFavoriteProduct(product),
                     padding: EdgeInsets.zero,
-                    highlightColor: theme.colorScheme.error.withAlpha(28),
+                    highlightColor: theme.colorScheme.error.withOpacity(0.1),
                     visualDensity: VisualDensity.compact,
                     icon: Icon(
                       Symbols.favorite_border_rounded,
