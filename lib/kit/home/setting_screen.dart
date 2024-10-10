@@ -49,7 +49,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   "User Interface",
-                  style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface.withAlpha(180), fontWeight: FontWeight.w600),
+                  style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface.withOpacity(0.6), fontWeight: FontWeight.w600),
                 ),
               ),
               const SizedBox(height: 4),
@@ -94,7 +94,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   "Links",
-                  style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface.withAlpha(180), fontWeight: FontWeight.w600),
+                  style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurface.withOpacity(0.6), fontWeight: FontWeight.w600),
                 ),
               ),
               const SizedBox(height: 4),

@@ -24,7 +24,7 @@ class DemoNavigationItem extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
-                color: theme.dividerColor.withAlpha(60),
+                color: theme.colorScheme.surfaceContainerHighest,
               )),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
