@@ -29,7 +29,7 @@ class _AppsHomeState extends State<AppsHome> {
 
   double mainGridAspectRatio() {
     final double width = MediaQuery.of(context).size.width;
-    const int extraSpacing = 60;
+    const int extraSpacing = 16 * 3;
     const int gridCount = 2;
     const int fixHeight = 93;
     return ((width - extraSpacing) / gridCount) / fixHeight;
@@ -37,7 +37,7 @@ class _AppsHomeState extends State<AppsHome> {
 
   double gridAspectRatio() {
     final double width = MediaQuery.of(context).size.width;
-    const int extraSpacing = 60;
+    const int extraSpacing = 16 * 3;
     const int gridCount = 2;
     const int fixHeight = 57;
     return ((width - extraSpacing) / gridCount) / fixHeight;
@@ -49,7 +49,7 @@ class _AppsHomeState extends State<AppsHome> {
       builder: (BuildContext context, AppNotifier value, Widget? child) {
         theme = Style.theme();
         return ListView(
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 30),
           shrinkWrap: true,
           physics: const ClampingScrollPhysics(),
           children: <Widget>[
@@ -59,10 +59,10 @@ class _AppsHomeState extends State<AppsHome> {
                 crossAxisCount: 2,
                 physics: const ClampingScrollPhysics(),
                 shrinkWrap: true,
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-                mainAxisSpacing: 20,
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                mainAxisSpacing: 16,
                 childAspectRatio: mainGridAspectRatio(),
-                crossAxisSpacing: 20,
+                crossAxisSpacing: 16,
                 children: [
                   DemoNavigationItem(
                       title: "Ecommerce 1",
@@ -73,10 +73,10 @@ class _AppsHomeState extends State<AppsHome> {
                                 crossAxisCount: 2,
                                 physics: const ClampingScrollPhysics(),
                                 shrinkWrap: true,
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                                mainAxisSpacing: 20,
+                                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                                mainAxisSpacing: 16,
                                 childAspectRatio: gridAspectRatio(),
-                                crossAxisSpacing: 20,
+                                crossAxisSpacing: 16,
                                 children: [
                                   DemoNavigationItem(title: "Home", navigation: () => const shopping_home_1.ShoppingHomeView()),
                                   DemoNavigationItem(title: "Explore", navigation: () => const shopping_explore_1.ShoppingExploreView()),
@@ -96,10 +96,10 @@ class _AppsHomeState extends State<AppsHome> {
                                 crossAxisCount: 2,
                                 physics: const ClampingScrollPhysics(),
                                 shrinkWrap: true,
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                                mainAxisSpacing: 20,
+                                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                                mainAxisSpacing: 16,
                                 childAspectRatio: gridAspectRatio(),
-                                crossAxisSpacing: 20,
+                                crossAxisSpacing: 16,
                                 children: [
                                   DemoNavigationItem(title: "Home", navigation: () => const health_home_1.HealthViewView()),
                                   DemoNavigationItem(title: "Activity", navigation: () => const health_activity_1.HealthActivityView()),
@@ -109,7 +109,7 @@ class _AppsHomeState extends State<AppsHome> {
                           )),
                 ]),
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: theme.colorScheme.primaryContainer,
