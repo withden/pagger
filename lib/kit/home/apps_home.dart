@@ -59,7 +59,6 @@ class _AppsHomeState extends State<AppsHome> {
                 crossAxisCount: 2,
                 physics: const ClampingScrollPhysics(),
                 shrinkWrap: true,
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                 mainAxisSpacing: 16,
                 childAspectRatio: mainGridAspectRatio(),
                 crossAxisSpacing: 16,
@@ -90,6 +89,7 @@ class _AppsHomeState extends State<AppsHome> {
                   DemoNavigationItem(
                       title: "Health 1",
                       iconData: Symbols.health_and_safety_rounded,
+                      badge: "New",
                       navigation: () => DemoNavigationPage(
                             title: 'Health',
                             body: GridView.count(
@@ -108,6 +108,7 @@ class _AppsHomeState extends State<AppsHome> {
                                 ]),
                           )),
                 ]),
+            const SizedBox(height: 32),
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -115,8 +116,7 @@ class _AppsHomeState extends State<AppsHome> {
                 color: theme.colorScheme.primaryContainer,
               ),
               child: Center(
-                  child: Text("More Apps are coming soon...",
-                      style: theme.textTheme.bodyLarge!.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600))),
+                  child: Text("More Apps are coming soon...", style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer))),
             ),
           ],
         );

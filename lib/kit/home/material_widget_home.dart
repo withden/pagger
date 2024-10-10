@@ -25,8 +25,7 @@ class _MaterialWidgetsHomeState extends State<MaterialWidgetsHome> {
             borderRadius: BorderRadius.circular(12),
             color: theme.colorScheme.primaryContainer,
           ),
-          child: Text("Material Widgets are coming soon...",
-              style: theme.textTheme.bodyLarge!.copyWith(color: theme.colorScheme.onPrimaryContainer, fontWeight: FontWeight.w600)),
+          child: Text("Material Widgets are coming soon...", style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onPrimaryContainer)),
         ),
       );
     });
