@@ -85,17 +85,20 @@ class SingleActivityWidget extends StatelessWidget {
     return Row(
       children: [
         startContent,
-        Container(
-          margin: const EdgeInsets.only(left: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: theme.textTheme.titleSmall),
-              Text(description, style: theme.textTheme.bodySmall),
-            ],
-          ),
+        const SizedBox(
+          width: 16,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(title, style: theme.textTheme.titleSmall),
+            Text(description, style: theme.textTheme.bodySmall),
+          ],
         ),
         const Spacer(),
+        const SizedBox(
+          width: 16,
+        ),
         Text(time, style: theme.textTheme.bodySmall),
       ],
     );
