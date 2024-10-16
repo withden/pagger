@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 import 'package:pagger/kit/style.dart';
 import 'package:pagger/routes.dart';
@@ -28,9 +29,17 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const HomeScreen(),
         getPages: getRoutes(),
+        builder: (context, child) {
+          return Directionality(
+            textDirection: AppTranslator.textDirection,
+            child: child ?? const SizedBox(),
+          );
+        },
         theme: Style.lightTheme,
         darkTheme: Style.darkTheme,
         themeMode: AppTheme.themeType,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
       );
     });
   }

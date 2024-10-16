@@ -17,7 +17,14 @@ class _SettingWidgetState extends State<SettingWidget> {
   bool isDark = false;
   TextDirection textDirection = TextDirection.ltr;
 
-  void changeDirection() {}
+  void changeDirection() {
+    if (AppTranslator.textDirection == TextDirection.ltr) {
+      AppTranslator.changeDirection(TextDirection.rtl);
+    } else {
+      AppTranslator.changeDirection(TextDirection.ltr);
+    }
+    setState(() {});
+  }
 
   void changeTheme() {
     if (AppTheme.themeType == ThemeMode.light) {
@@ -67,7 +74,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 title: RichText(
                   text: TextSpan(children: [
                     TextSpan(text: "Mode: ", style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
-                    TextSpan(text: isDark ? "Light" : "Dark")
+                    TextSpan(text: isDark ? "Dark" : "Light")
                   ], style: theme.textTheme.bodyMedium),
                 ),
               ),
@@ -78,14 +85,14 @@ class _SettingWidgetState extends State<SettingWidget> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
-                leading: const Icon(
-                  Symbols.format_textdirection_l_to_r,
+                leading: Icon(
+                  AppTranslator.textDirection == TextDirection.ltr ? Symbols.format_textdirection_l_to_r : Symbols.format_textdirection_r_to_l_rounded,
                   size: 18,
                 ),
                 title: RichText(
                   text: TextSpan(children: [
                     TextSpan(text: "Direction: ", style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
-                    const TextSpan(text: "Left to Right")
+                    TextSpan(text: AppTranslator.textDirection == TextDirection.rtl ? "Right to Left" : "Left to Right")
                   ], style: theme.textTheme.bodyMedium),
                 ),
               ),
