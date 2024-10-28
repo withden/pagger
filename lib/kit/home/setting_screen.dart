@@ -27,7 +27,7 @@ class _SettingWidgetState extends State<SettingWidget> {
   }
 
   void changeTheme() {
-    if (AppTheme.themeType == ThemeMode.light) {
+    if (AppTheme.themeMode == ThemeMode.light) {
       AppTheme.changeTheme(ThemeMode.dark);
     } else {
       AppTheme.changeTheme(ThemeMode.light);
@@ -43,7 +43,7 @@ class _SettingWidgetState extends State<SettingWidget> {
   Widget build(BuildContext context) {
     return Consumer<AppNotifier>(builder: (BuildContext context, AppNotifier value, Widget? child) {
       theme = Style.theme();
-      isDark = AppTheme.themeType == ThemeMode.dark;
+      isDark = AppTheme.themeMode == ThemeMode.dark;
       return Theme(
         data: theme,
         child: Padding(

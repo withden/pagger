@@ -29,6 +29,6 @@ class Style {
       ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffd000ff), brightness: Brightness.dark), textTheme: _textTheme);
 
   static ThemeData theme() {
-    return AppTheme.themeType == ThemeMode.dark ? _darkTheme : _lightTheme;
+    return AppTheme.themeMode == ThemeMode.dark ? _darkTheme : _lightTheme;
   }
 }
