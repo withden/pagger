@@ -1,16 +1,11 @@
-# pagger
+# Pagger
 
-A Open-Source Flutter UI Kit
+An Open-Source Flutter UI Kit (Pages)
 
-## Getting Started
+## Documentation
 
-This project is a starting point for a Flutter application.
+Visit [online preview](https://getappui.com/pagger/preview) to view the documentation.
 
-A few resources to get you started if this is your first Flutter project:
+## License
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Licensed under the [MIT license](https://github.com/withden/pagger/blob/main/LICENSE.md).
